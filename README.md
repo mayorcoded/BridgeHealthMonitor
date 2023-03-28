@@ -12,15 +12,10 @@ hacks. Here is a list of past bridge hacks for reference:
 
 As a user of bridge, you want to ensure that if a bridge is malfunctioning, you become aware of the hack/malfunction 
 as soon as possible so you can pull out your assets from the Bridge. In order to achieve this goal, you need to 
-continuously monitor the on-chain data related to the Bridge. For this question, we will take the Optimism bridge as 
-an example. Let’s say you wanted to monitor the Optimism bridge functioning using chain data so you can identify a hack 
-as soon as possible.
-
-* Write a short write-up describing how you would identify in real-time whether the Optimism bridge is working effectively or not.
-* What all on-chain data would you listen for? Please feel free to read through any docs or research online.
-* Write a script (in the language of your choice) to implement your approach and output True if the Optimism bridge is working effectively and vice-versa. Feel free to use Etherscan free APIs for accessing on-chain data.
+continuously monitor the on-chain data related to the Bridge. 
 
 ## Solution Design
+
 Every cross-chain bridge has a separate design for how they move assets from one chain layer to another. However,
 the core part of any bridge includes a contract on a root chain that locks or unlock assets, a contract on the child
 chain that mints new assets, and a relayer that communicates messages between the two chains. Using these components of 
